@@ -1,5 +1,7 @@
 package session3.lecture.reference_variable_casting;
 
+import session3.lecture.constructors.Abort;
+
 /**
  * Class to demo reference variable casting.
  *
@@ -7,46 +9,48 @@ package session3.lecture.reference_variable_casting;
  */
 public class Demo implements IDemo {
 
-    private Double squarePi;
-
     public static void main(String[] args) {
         Demo clazz = new Demo();
         clazz.getSecurityCode();
         clazz.getSquarePi();
 
         IDemo iface = new Demo();
+        IDemo casted = clazz;
         iface.getSecurityCode();
-        iface.getSquarePi();
+        //iface.getSquarePi();
 
         Object obj = new Demo();
+        //obj.getSecurityCode();
+        //obj.getSquarePi();
         if (obj instanceof IDemo) {
             ((IDemo) obj).getSecurityCode();
-            ((IDemo) obj).getSecurityCode();
+            //((IDemo) obj).getSquarePi();
         }
         if (obj instanceof Demo) {
-            ((Demo) obj).getSecurityCode();
-            ((Demo) obj).getSquarePi();
+            Demo demo = (Demo) obj;
+            demo.getSecurityCode();
+            demo.getSquarePi();
         }
-
+        System.out.println(obj instanceof Abort);
     }
 
     public void wrapperTypes() {
-        final double pi = 3.14;
-        final int x = (int) pi;
-        final var xXx = x * pi;
 
-        this.squarePi = xXx;
     }
 
     /**
      * @return the square of Pi
      */
     public Double getSquarePi() {
-        return squarePi;
+        final double pi = 3.14;
+        final int x = (int) pi;
+        final var xXx = x * pi;
+
+        return Double.valueOf(xXx);
     }
 
     @Override
     public Long getSecurityCode() {
-        return (long) hashCode();
+        return Long.valueOf((long) hashCode());
     }
 }

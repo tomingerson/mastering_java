@@ -1,4 +1,4 @@
-package session3.lecture.coupling_cohesion;
+package session3.lab;
 
 /**
  * This class represents a car of make Nissan, model GT-R in a specific edition
@@ -30,6 +30,9 @@ public class NissanGTR {
         }
     }
 
+    /**
+     * @return the torque of this cars' engine
+     */
     Integer getTorque() {
         if (edition instanceof GTR_Edition_Nismo) {
             return ((GTR_Edition_Nismo) edition).torque;
