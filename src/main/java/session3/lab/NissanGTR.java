@@ -8,14 +8,14 @@ package session3.lab;
  */
 public class NissanGTR {
 
-    private Object edition;
+    private NissanGTREdition edition;
 
     /**
      * Creates a new Nissan GT-R edition.
      *
      * @param edition the edition to use
      */
-    public NissanGTR(Object edition) {
+    public NissanGTR(NissanGTREdition edition) {
         this.edition = edition;
     }
 
@@ -23,37 +23,20 @@ public class NissanGTR {
      * @return this cars horse power
      */
     Integer getHorsepower() {
-        if (edition instanceof GTR_Edition_Nismo) {
-            return ((GTR_Edition_Nismo) edition).horsePower;
-        } else {
-            return new GTR_Edition_Default().horsePower;
-        }
+        return this.edition.getHorsepower();
     }
 
     /**
      * @return the torque of this cars' engine
      */
     Integer getTorque() {
-        if (edition instanceof GTR_Edition_Nismo) {
-            return ((GTR_Edition_Nismo) edition).torque;
-        }
-        return new GTR_Edition_Default().torque;
+        return this.edition.getTorque();
     }
 
     /**
      * @return this cars color depending on the edition
      */
     String getColor() {
-        if (edition instanceof GTR_Edition_Nismo) {
-            return ((GTR_Edition_Nismo) edition).color;
-        } else if (edition instanceof GTR_Edition_Track) {
-            return ((GTR_Edition_Track) edition).color;
-        } else if (edition instanceof GTR_Edition_Black) {
-            return ((GTR_Edition_Black) edition).color;
-        } else if (edition instanceof GTR_Edition_Prestige) {
-            return ((GTR_Edition_Prestige) edition).color;
-        } else {
-            return ((GTR_Edition_Default) edition).color;
-        }
+        return this.edition.getColor();
     }
 }
