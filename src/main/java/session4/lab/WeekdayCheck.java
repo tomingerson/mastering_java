@@ -62,7 +62,7 @@ class Weekday {
         return this.index;
     }
 
-    Weekday[] values() {
+    static Weekday[] values() {
         return new Weekday[]{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,
                 SATURDAY};
     }
