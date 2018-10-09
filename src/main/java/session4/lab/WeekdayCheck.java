@@ -13,7 +13,7 @@ class WeekdayCheck {
     }
 
     public static boolean isWeekend(final Weekday day) {
-        return false;
+        return (day == Weekday.SATURDAY || day == Weekday.SUNDAY);
     }
 
     public String check() {
