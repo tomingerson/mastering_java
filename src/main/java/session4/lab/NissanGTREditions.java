@@ -19,9 +19,7 @@ public enum NissanGTREditions implements INissanGTREdition {
     }
 
     NissanGTREditions(String color) {
-        this.color = color;
-        this.horsePower = 570;
-        this.torque = 637;
+        this(color, 570, 637);
     }
 
     @Override
