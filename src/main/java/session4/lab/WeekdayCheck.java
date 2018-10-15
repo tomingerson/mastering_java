@@ -54,16 +54,16 @@ class Weekday {
         this.index = index;
     }
 
+    static Weekday[] values() {
+        return new Weekday[]{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,
+                SATURDAY};
+    }
+
     String name() {
         return this.name;
     }
 
     int ordinal() {
         return this.index;
-    }
-
-    static Weekday[] values() {
-        return new Weekday[]{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY,
-                SATURDAY};
     }
 }
