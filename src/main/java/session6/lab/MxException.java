@@ -10,27 +10,23 @@ URL www.amazon.com/SCJP-Certified-Programmer-Java-310-065/dp/0071591060?Subscrip
 package session6.lab;
 
 /**
- * We try to decide, if a given food is bad or ok. The food is given as
- * commandline-argument.
- * In this excercise we want to create our own exception without any methods.
+ * We try to decide, if a given food is bad or ok. The food is given as commandline-argument. In this excercise we want
+ * to create our own exception without any methods.
  * <ol>
  * <li>Let's first create our exception. We will call it {@code BadFoodException}.
  * This exception will be thrown when bad food is encountered.</li>
  * <li>Create a method called {@code checkFood}. It takes a String argument and
- * throws our exception if it doesn't like the food it was given. Otherwise it
- * tells ut it likes the food. You can add any foods you aren't particularly fond
- * id to the list.</li>
+ * throws our exception if it doesn't like the food it was given. Otherwise it tells ut it likes the food. You can add
+ * any foods you aren't particularly fond id to the list.</li>
  * <li>Now in the {@code main} method of this class (MyException), you'll get the
- * commandline-argument out of the String-array, and them pass that String on to
- * the {@code checkFood} method. Because it is a checked exception, the {@code
- * checkFood} method must declare it, and the {@code main} method must handle it
- * (using a try-catch). Do not have {@code main} declare the exception, because
- * if {@code main} propagates the exception, who else is back there to catch it?</li>
+ * commandline-argument out of the String-array, and them pass that String on to the {@code checkFood} method. Because
+ * it is a checked exception, the {@code checkFood} method must declare it, and the {@code main} method must handle it
+ * (using a try-catch). Do not have {@code main} declare the exception, because if {@code main} propagates the
+ * exception, who else is back there to catch it?</li>
  * <li>As nifty as exception handling is, it is still up to the developer to make
- * proper use of it. Exception handling makes organizing our code and signaling
- * problems easy, but the exception handlers still have to be written. You will
- * find that even the most complex situations can be handled, and your code will be
- * reusable, readable, and maintainable.</li>
+ * proper use of it. Exception handling makes organizing our code and signaling problems easy, but the exception
+ * handlers still have to be written. You will find that even the most complex situations can be handled, and your code
+ * will be reusable, readable, and maintainable.</li>
  * </ol>
  *
  * @author Created by tom on 15.10.2018.
@@ -39,5 +35,28 @@ public class MxException {
 
     public static void main(String[] args) {
 
+        if (args.length == 0) {
+            System.err.println("Please provide a food as commandline argument");
+        }
+        try {
+            checkFood(args[0]);
+        } catch (BadFoodException e) {
+            e.printStackTrace();
+            System.out.println("you passed icky food");
+        }
+
     }
+
+    static void checkFood(String food) throws BadFoodException {
+        String lowercase = food.toLowerCase();
+        switch (food) {
+            case "cilantro":
+                throw new BadFoodException();
+            default:
+                System.out.println("yummy");
+        }
+    }
+}
+
+class BadFoodException extends Exception {
 }

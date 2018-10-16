@@ -24,4 +24,20 @@ class StringReverse {
         StringBuilder sb = new StringBuilder(input);
         return sb.reverse().toString();
     }
+
+    public static void main(String[] args) {
+        try {
+            System.out.println("entering main");
+            System.out.println(reverse(args[0]));
+            System.out.println("exiting main");
+        } catch (IllegalArgumentException exIA) {
+            System.out.println("handling IllegalArgumentException");
+            exIA.printStackTrace();
+        } catch (NullPointerException exNP) {
+            System.out.println("handling Nullpointerexc");
+            exNP.printStackTrace();
+        } finally {
+            System.out.println("in finally block");
+        }
+    }
 }
