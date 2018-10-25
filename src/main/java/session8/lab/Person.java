@@ -5,16 +5,18 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
 /**
+ * Person having a name;
  * @author Created by ergouser on 23.10.18.
  */
 class Person {
 
-    public Person(final String name) {
+    static final PersonComparator PERSON_COMPARATOR = new PersonComparator();
+    private final String name;
+
+    Person(final String name) {
         if (null == name) throw new IllegalArgumentException("name must not be null");
         this.name = name;
     }
-
-    private final String name;
 
     @Override
     public String toString() {
@@ -23,7 +25,7 @@ class Person {
                 .toString();
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -40,6 +42,9 @@ class Person {
         return Objects.hash(name);
     }
 
+    /**
+     * Null-safe comparator for Person.
+     */
     static class PersonComparator implements Comparator<Person> {
 
         @Override
@@ -47,7 +52,14 @@ class Person {
             if (o1 == null && o2 == null) return 0;
             if (o1 == null) return -1;
             if (o2 == null) return 1;
-            return o1.getName().compareTo(o2.getName());
+            // natural order of String
+            //return o1.getName().compareTo(o2.getName());
+
+            // comparison by length (then lexicographically)
+            if (o1.getName().length() == o2.getName().length()) {
+                return o1.getName().compareTo(o2.getName());
+            }
+            return o1.getName().length() - o2.getName().length();
         }
     }
 }

@@ -14,4 +14,22 @@ class CollectionsComparisonTest {
         Person match = CollectionsComparison.closestStudentList("Tom");
         assertEquals(new Person("Tim"), match);
     }
+
+    @Test
+    void closestStudentQueue() {
+        Person match = CollectionsComparison.closestStudenQueue("Tom");
+        assertEquals(new Person("Tim"), match);
+    }
+
+    @Test
+    void closestStudentSet() {
+        Person match = CollectionsComparison.closestStudenSet("Tom");
+        assertEquals(new Person("Tim"), match);
+    }
+
+    @Test
+    void closestStudentMap() {
+        Person match = CollectionsComparison.closestStudenMap("Tom");
+        assertEquals(new Person("Tim"), match);
+    }
 }
