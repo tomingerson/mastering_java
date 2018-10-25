@@ -12,6 +12,6 @@ class CollectionsComparisonTest {
     @Test
     void closestStudentList() {
         Person match = CollectionsComparison.closestStudentList("Tom");
-        assertEquals("Tim", match);
+        assertEquals(new Person("Tim"), match);
     }
 }

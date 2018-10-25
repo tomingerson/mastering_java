@@ -1,14 +1,13 @@
 package session8.lab;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author Created by ergouser on 23.10.18.
  */
-public class CollectionsComparison {
+class CollectionsComparison {
 
     private static Collection<Person> students = List.of(
             new Person("Kristof"),
@@ -32,12 +31,15 @@ public class CollectionsComparison {
             new Person("Ali")
     );
 
-    static Person closestStudentList(String searchName) {
+    static Person closestStudentList(final String searchName) {
+        Person.PersonComparator comp = new Person.PersonComparator();
+
         List<Person> list = new LinkedList<>(students);
-        Collections.sort(list);
+        list.sort(comp);
+        Person toSearch = new Person(searchName);
         Person match = null;
         for (Person p : list) {
-            if (p.compareTo(match) < 0) {
+            if (comp.compare(p, toSearch) < 0) {
                 match = p;
             }
         }
