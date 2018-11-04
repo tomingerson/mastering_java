@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="mastering_java_integTest" target="1.10" />
+      <module name="mastering_java_main" target="1.10" />
+      <module name="mastering_java_session10_module1" target="1.10" />
+      <module name="mastering_java_session10_module2" target="1.10" />
+      <module name="mastering_java_test" target="1.10" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
