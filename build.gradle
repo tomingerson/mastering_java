@@ -1,57 +1,14 @@
 plugins {
-    id 'java'
-    id 'groovy'
     id 'idea'
 }
 
-group 'mastering_java'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = JavaVersion.VERSION_1_10
-
-
-sourceSets {
-    main {
-        groovy {
-            srcDirs = []
-        }
-    }
-    test {
-        groovy.srcDirs = []
-    }
-    integTest.java.srcDirs = []
-    session10_module1 { groovy.srcDirs = [] }
-    session10_module2 { groovy.srcDirs = [] }
-}
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-    jcenter()
-    google()
-}
-
-dependencies {
-    session10_module1Compile 'org.apache.commons:commons-lang3:3.8.1'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
-
-    integTestCompile 'org.codehaus.groovy:groovy-all:2.5.3'
-    integTestCompile 'org.gebish:geb-core:2.2'
-    integTestCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.14.0'
-    integTestCompile 'org.seleniumhq.selenium:selenium-support:3.14.0'
-}
-
-
-test {
-    useJUnitPlatform()
-    testLogging {
-        events 'PASSED', 'FAILED', 'SKIPPED'
-    }
+subprojects {
+    group 'mastering_java'
+    version '1.0-SNAPSHOT'
 }
 
 allprojects {
+
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
             options.fork = true
@@ -59,12 +16,13 @@ allprojects {
             //options.compilerArgs << "-Xlint:all"
         }
     }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        google()
+    }
+
 }
 
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Mastering Java Sessions',
-                'Implementation-Version': version,
-                'Main-Class': 'de.fh_kiel.mastering_java.session10.consumer.Consumer'
-    }
-}
