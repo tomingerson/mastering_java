@@ -3,7 +3,7 @@ package session9.refactor;
 /**
  * @author Created by ergouser on 23.10.18.
  */
-public class CountryStorage extends Storage<Country> {
+public class CountryStorage {
 //    private Map<Long, Country> storage = new HashMap<>();
 //
 //    public void insert(Country country) {
