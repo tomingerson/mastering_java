@@ -1,4 +1,4 @@
-package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+package de.fh_kiel.mastering_java.patterns.factory.lowcouple;
 
 import java.util.Objects;
 import java.util.StringJoiner;
@@ -8,7 +8,7 @@ import java.util.StringJoiner;
  *
  * @author Created by tom on 15.11.2018.
  */
-public class Chassis {
+class Chassis {
     private final Engine engine;
     private final String transmission;
     private final String differential;

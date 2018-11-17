@@ -1,11 +1,13 @@
-/**
- * @author Created by ergouser on 16.11.18.
- */
-public class Wheel {
+package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+
+import java.util.Objects;
+import java.util.StringJoiner;
+
+class Wheel {
     private final String tire;
     private final String rim;
 
-    public Wheel(String tire, String rim) {
+    Wheel(String tire, String rim) {
         this.tire = tire;
         this.rim = rim;
     }
@@ -16,5 +18,27 @@ public class Wheel {
 
     public String getRim() {
         return rim;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Wheel)) return false;
+        Wheel wheel = (Wheel) o;
+        return Objects.equals(tire, wheel.tire) &&
+                Objects.equals(rim, wheel.rim);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tire, rim);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Wheel.class.getSimpleName() + "[", "]")
+                .add("tire='" + tire + "'")
+                .add("rim='" + rim + "'")
+                .toString();
     }
 }

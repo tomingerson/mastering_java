@@ -1,4 +1,4 @@
-package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+package de.fh_kiel.mastering_java.patterns.factory.lowcouple;
 
 import java.util.Objects;
 import java.util.StringJoiner;
@@ -10,9 +10,9 @@ import java.util.StringJoiner;
  */
 class Engine {
 
-    private final double speed;
-    private final double torque;
-    private final double power;
+    private final long speed;
+    private final long torque;
+    private final long power;
 
     /**
      * Creates a new engine with the given parameters.
@@ -21,7 +21,7 @@ class Engine {
      * @param torque measured in newton
      * @param power  measured in kilo watt
      */
-    Engine(double speed, double torque, double power) {
+    Engine(long speed, long torque, long power) {
         this.speed = speed;
         this.torque = torque;
         this.power = power;
