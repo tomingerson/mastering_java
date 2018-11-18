@@ -1,4 +1,4 @@
-package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+package de.fh_kiel.mastering_java.patterns.highcouple;
 
 import java.util.Objects;
 import java.util.StringJoiner;

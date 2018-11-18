@@ -1,17 +1,13 @@
-package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+package de.fh_kiel.mastering_java.patterns.highcouple;
 
 import java.util.Objects;
 import java.util.StringJoiner;
 
 class NissanGTRNismo {
-    private final Chassis chassis;
-    private final Wheel wheel_front_left;
-    // imagina a couple more wheels here ;-)
 
-    NissanGTRNismo() {
-        this.chassis = new Chassis("differential", "7000", "657", "441");
-        this.wheel_front_left = new Wheel("255/40ZR20", "10Jx20 ET41");
-    }
+    private final Chassis chassis = new Chassis("differential", "7000", "657", "441");
+    private final Wheel wheel_front_left = new Wheel("255/40ZR20", "10Jx20 ET41");
+    // imagina a couple more wheels here ;-)
 
     public Chassis getChassis() {
         return chassis;

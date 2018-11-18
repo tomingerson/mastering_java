@@ -1,4 +1,4 @@
-package de.fh_kiel.mastering_java.patterns.factory.highcouple;
+package de.fh_kiel.mastering_java.patterns.highcouple;
 
 public class Main {
     public static void main(String[] args) {

@@ -2,11 +2,27 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="mastering_java_integTest" target="1.10" />
-      <module name="mastering_java_main" target="1.10" />
-      <module name="mastering_java_session10_module1" target="1.10" />
-      <module name="mastering_java_session10_module2" target="1.10" />
-      <module name="mastering_java_test" target="1.10" />
+      <module name="session10_integTest" target="1.10" />
+      <module name="session10_main" target="1.10" />
+      <module name="session10_session10_module1" target="1.10" />
+      <module name="session10_session10_module2" target="1.10" />
+      <module name="session10_test" target="1.10" />
+      <module name="session11_main" target="1.10" />
+      <module name="session11_test" target="1.10" />
+      <module name="session3_main" target="1.10" />
+      <module name="session3_test" target="1.10" />
+      <module name="session4_main" target="1.10" />
+      <module name="session4_test" target="1.10" />
+      <module name="session5_main" target="1.10" />
+      <module name="session5_test" target="1.10" />
+      <module name="session6_main" target="1.10" />
+      <module name="session6_test" target="1.10" />
+      <module name="session7_main" target="1.10" />
+      <module name="session7_test" target="1.10" />
+      <module name="session8_main" target="1.10" />
+      <module name="session8_test" target="1.10" />
+      <module name="session9_main" target="1.10" />
+      <module name="session9_test" target="1.10" />
     </bytecodeTargetLevel>
   </component>
 </project>

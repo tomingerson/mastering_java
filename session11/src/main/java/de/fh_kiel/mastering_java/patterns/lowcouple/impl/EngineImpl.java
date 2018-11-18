@@ -1,14 +1,11 @@
-package de.fh_kiel.mastering_java.patterns.factory.lowcouple;
+package de.fh_kiel.mastering_java.patterns.lowcouple.impl;
+
+import de.fh_kiel.mastering_java.patterns.lowcouple.Engine;
 
 import java.util.Objects;
 import java.util.StringJoiner;
 
-/**
- * Models an engine of a car
- *
- * @author Created by tom on 15.11.2018.
- */
-class Engine {
+public class EngineImpl implements Engine {
 
     private final long speed;
     private final long torque;
@@ -21,7 +18,7 @@ class Engine {
      * @param torque measured in newton
      * @param power  measured in kilo watt
      */
-    Engine(long speed, long torque, long power) {
+    public EngineImpl(long speed, long torque, long power) {
         this.speed = speed;
         this.torque = torque;
         this.power = power;
@@ -42,8 +39,8 @@ class Engine {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Engine)) return false;
-        Engine engine = (Engine) o;
+        if (!(o instanceof EngineImpl)) return false;
+        EngineImpl engine = (EngineImpl) o;
         return Double.compare(engine.speed, speed) == 0 &&
                 Double.compare(engine.torque, torque) == 0 &&
                 Double.compare(engine.power, power) == 0;
@@ -56,7 +53,7 @@ class Engine {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Engine.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", EngineImpl.class.getSimpleName() + "[", "]")
                 .add("speed=" + speed)
                 .add("torque=" + torque)
                 .add("power=" + power)
