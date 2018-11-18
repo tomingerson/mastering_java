@@ -3,29 +3,22 @@ package de.fh_kiel.mastering_java.patterns.lab;
 /**
  * A lamp.
  */
-public class Lamp {
+public class Lamp implements Switchable {
 
-    private LampState state = LampState.OFF;
+    private State state = State.OFF;
 
     public void turnOn() {
-        state = LampState.ON;
+        state = State.ON;
     }
 
     public void turnOff() {
-        state = LampState.OFF;
+        state = State.OFF;
     }
 
     /**
      * @return what state is the lamp currently in?
      */
-    public LampState getState() {
+    public State getState() {
         return state;
-    }
-
-    /**
-     * The state of a lamp can be either turned on or turned off.
-     */
-    enum LampState {
-        ON, OFF
     }
 }

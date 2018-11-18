@@ -1,21 +1,20 @@
 package de.fh_kiel.mastering_java.patterns.lab;
 
-
-/**
- * A button to switch a lamp on and off.
- */
-public class Button {
-    private final Lamp lamp = new Lamp();
+public interface Button<T extends Switchable> {
 
     /**
-     * switches the lamp either on or off, depending on its current state.
+     * @return the device to switch
      */
-    public void switchLamp() {
-        Lamp.LampState state = lamp.getState();
-        if ( state == Lamp.LampState.ON ) {
-            lamp.turnOff();
+    T getSwitchable();
+
+    /**
+     * Executes the buttons action (switching the switchable)
+     */
+    default void action() {
+        if (getSwitchable().getState() == Switchable.State.ON) {
+            getSwitchable().turnOff();
         } else {
-            lamp.turnOn();
+            getSwitchable().turnOn();
         }
     }
 }
