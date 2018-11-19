@@ -12,7 +12,7 @@ public class Button {
      */
     public void switchLamp() {
         Lamp.LampState state = lamp.getState();
-        if ( state == Lamp.LampState.ON ) {
+        if (state == Lamp.LampState.ON) {
             lamp.turnOff();
         } else {
             lamp.turnOn();

@@ -21,8 +21,10 @@ class NissanFactory {
         switch (edition) {
             case NISMO:
                 nissanGTR = buildNissanGTRNismo();
+                break;
             case BLACK:
                 nissanGTR = buildNissanGTRBlack();
+                break;
         }
         return nissanGTR;
     }

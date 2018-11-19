@@ -12,6 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session11/session11.iml" filepath="$PROJECT_DIR$/.idea/modules/session11/session11.iml" group="session11" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session11/session11_main.iml" filepath="$PROJECT_DIR$/.idea/modules/session11/session11_main.iml" group="session11" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session11/session11_test.iml" filepath="$PROJECT_DIR$/.idea/modules/session11/session11_test.iml" group="session11" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/session12/session12.iml" filepath="$PROJECT_DIR$/.idea/modules/session12/session12.iml" group="session12" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/session12/session12_main.iml" filepath="$PROJECT_DIR$/.idea/modules/session12/session12_main.iml" group="session12" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/session12/session12_test.iml" filepath="$PROJECT_DIR$/.idea/modules/session12/session12_test.iml" group="session12" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session3/session3.iml" filepath="$PROJECT_DIR$/.idea/modules/session3/session3.iml" group="session3" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session3/session3_main.iml" filepath="$PROJECT_DIR$/.idea/modules/session3/session3_main.iml" group="session3" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/session3/session3_test.iml" filepath="$PROJECT_DIR$/.idea/modules/session3/session3_test.iml" group="session3" />

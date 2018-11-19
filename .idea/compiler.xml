@@ -9,6 +9,8 @@
       <module name="session10_test" target="1.10" />
       <module name="session11_main" target="1.10" />
       <module name="session11_test" target="1.10" />
+      <module name="session12_main" target="1.10" />
+      <module name="session12_test" target="1.10" />
       <module name="session3_main" target="1.10" />
       <module name="session3_test" target="1.10" />
       <module name="session4_main" target="1.10" />

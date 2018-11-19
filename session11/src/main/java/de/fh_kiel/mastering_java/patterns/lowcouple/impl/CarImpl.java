@@ -16,8 +16,8 @@ public class CarImpl implements Car {
     private final Wheel wheel_back_right;
 
     public CarImpl(final Chassis chassis, final Wheel wheel_front_left,
-            final Wheel wheel_front_right, final Wheel wheel_back_left,
-            final Wheel wheel_back_right) {
+                   final Wheel wheel_front_right, final Wheel wheel_back_left,
+                   final Wheel wheel_back_right) {
         this.chassis = chassis;
         this.wheel_front_left = wheel_front_left;
         this.wheel_front_right = wheel_front_right;

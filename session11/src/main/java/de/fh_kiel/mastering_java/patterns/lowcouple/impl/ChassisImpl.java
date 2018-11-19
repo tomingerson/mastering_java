@@ -14,7 +14,7 @@ public class ChassisImpl implements Chassis {
     private final String suspension;
 
     public ChassisImpl(final Engine engine, final String transmission,
-                final String differential, final String suspension) {
+                       final String differential, final String suspension) {
         this.engine = engine;
         this.transmission = transmission;
         this.differential = differential;

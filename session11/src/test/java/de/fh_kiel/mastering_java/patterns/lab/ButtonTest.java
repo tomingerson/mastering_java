@@ -37,7 +37,7 @@ class ButtonTest {
     }
 
     @Test
-    void switchLampOff() throws NoSuchFieldException {
+    void switchLampOff() {
 
         Lamp.LampState state = Lamp.LampState.ON;
         when(lamp.getState()).thenReturn(state);
