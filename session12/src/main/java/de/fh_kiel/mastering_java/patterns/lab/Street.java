@@ -1,32 +1,26 @@
 package de.fh_kiel.mastering_java.patterns.lab;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.StringJoiner;
+import java.util.*;
 
 /**
  * Class to represent a street in a city.
  */
 public class Street {
 
-    /** contains all the other streets joining this street */
+    /**
+     * contains all the other streets joining this street
+     */
     private final List<Street> joining = new LinkedList<>();
 
-    /** contains the number of the house as key and the height above sealevel as value */
+    /**
+     * contains the number of the house as key and the height above sealevel as value
+     */
     private final Map<Integer, Double> heightProfile = new HashMap<>();
 
     private Integer lowestHouseNumber;
     private Integer highestHouseNumber;
 
     private boolean containsCurve;
-
-    public Street(Integer lowestHouseNumber, Integer highestHouseNumber) {
-        this.lowestHouseNumber = lowestHouseNumber;
-        this.highestHouseNumber = highestHouseNumber;
-    }
 
     public Iterable<Street> getJoining() {
         return joining;
@@ -94,5 +88,43 @@ public class Street {
                 .add("highestHouseNumber=" + highestHouseNumber)
                 .add("containsCurve=" + containsCurve)
                 .toString();
+    }
+
+    class StreetBuilder {
+        private final Street street = new Street();
+
+        Street build() {
+            return this.street;
+        }
+
+        StreetBuilder addAnotherCorner(final Street corner) {
+            this.street.addJoining(corner);
+            return this;
+        }
+
+        StreetBuilder addAnotherHeightProfile(final Integer num, final Double hei) {
+            this.street.addHeightProfile(num, hei);
+            return this;
+        }
+
+        StreetBuilder withLowestHouseNumber(final Integer lhn) {
+            this.street.setLowestHouseNumber(lhn);
+            return this;
+        }
+
+        StreetBuilder withHighestHouseNumber(final Integer hhn) {
+            this.street.setHighestHouseNumber(hhn);
+            return this;
+        }
+
+        StreetBuilder withCurve() {
+            this.street.setContainsCurve(true);
+            return this;
+        }
+
+        StreetBuilder withoutCurve() {
+            this.street.setContainsCurve(false);
+            return this;
+        }
     }
 }
