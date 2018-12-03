@@ -115,4 +115,75 @@ public class Person {
     public int hashCode() {
         return Objects.hash(getGender(), getLastname(), getFirstname(), getNationality(), getResidency(), getBirthday(), getHeight(), getWeight());
     }
+
+    public static final class PersonBuilder {
+        private Gender gender;
+        private String lastname;
+        private String firstname;
+        private Country nationality;
+        private String residency;
+        private LocalDate birthday;
+        private int height;
+        private double weight;
+
+        private PersonBuilder() {
+        }
+
+        public static PersonBuilder aPerson() {
+            return new PersonBuilder();
+        }
+
+        public PersonBuilder withGender(Gender gender) {
+            this.gender = gender;
+            return this;
+        }
+
+        public PersonBuilder withLastname(String lastname) {
+            this.lastname = lastname;
+            return this;
+        }
+
+        public PersonBuilder withFirstname(String firstname) {
+            this.firstname = firstname;
+            return this;
+        }
+
+        public PersonBuilder withNationality(Country nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+
+        public PersonBuilder withResidency(String residency) {
+            this.residency = residency;
+            return this;
+        }
+
+        public PersonBuilder withBirthday(LocalDate birthday) {
+            this.birthday = birthday;
+            return this;
+        }
+
+        public PersonBuilder withHeight(int height) {
+            this.height = height;
+            return this;
+        }
+
+        public PersonBuilder withWeight(double weight) {
+            this.weight = weight;
+            return this;
+        }
+
+        public Person build() {
+            Person person = new Person();
+            person.setGender(gender);
+            person.setLastname(lastname);
+            person.setFirstname(firstname);
+            person.setNationality(nationality);
+            person.setResidency(residency);
+            person.setBirthday(birthday);
+            person.setHeight(height);
+            person.setWeight(weight);
+            return person;
+        }
+    }
 }
