@@ -28,6 +28,7 @@ class ExerciseTest {
     private String peter;
     private String ben;
 
+
     @BeforeEach
     void setUp() {
 
@@ -75,10 +76,10 @@ class ExerciseTest {
     void printlnAllPersons() {
         Exercise.printlnAllPersons(persons);
         assertEquals(
-                maryam + "\r\n" +
-                        aarav + "\r\n" +
-                        peter + "\r\n" +
-                        ben + "\r\n",
+                maryam + System.lineSeparator() +
+                        aarav + System.lineSeparator() +
+                        peter + System.lineSeparator() +
+                        ben + System.lineSeparator(),
                 outContent.toString());
     }
 
@@ -87,10 +88,10 @@ class ExerciseTest {
     void printlnAllPersonsSortedByLastname() {
         Exercise.printlnAllPersonsSortedByLastname(persons);
         assertEquals(
-                maryam + "\r\n" +
-                        peter + "\r\n" +
-                        ben + "\r\n" +
-                        aarav + "\r\n",
+                maryam + System.lineSeparator() +
+                        peter + System.lineSeparator() +
+                        ben + System.lineSeparator() +
+                        aarav + System.lineSeparator(),
                 outContent.toString());
     }
 
@@ -113,7 +114,7 @@ class ExerciseTest {
     void getAllPersonsResidencesSortedWithoutDuplicates() {
         List<String> residences =
                 Exercise.getAllPersonsResidencesSortedWithoutDuplicates(persons);
-        assertEquals(List.of("Berlin", "Mumbai", "Köln"), residences);
+        assertEquals(List.of("Berlin", "Köln", "Mumbai"), residences);
     }
 
     @Test
