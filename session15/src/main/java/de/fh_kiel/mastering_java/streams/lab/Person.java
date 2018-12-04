@@ -18,67 +18,67 @@ public class Person {
     private int height;
     private double weight;
 
-    public Gender getGender() {
+    Gender getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    void setGender(Gender gender) {
         this.gender = gender;
     }
 
-    public String getLastname() {
+    String getLastname() {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
+    void setLastname(String lastname) {
         this.lastname = lastname;
     }
 
-    public String getFirstname() {
+    String getFirstname() {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
+    void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
-    public Country getNationality() {
+    Country getNationality() {
         return nationality;
     }
 
-    public void setNationality(Country nationality) {
+    void setNationality(Country nationality) {
         this.nationality = nationality;
     }
 
-    public String getResidency() {
+    String getResidency() {
         return residency;
     }
 
-    public void setResidency(String residency) {
+    void setResidency(String residency) {
         this.residency = residency;
     }
 
-    public LocalDate getBirthday() {
+    LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
-    public int getHeight() {
+    int getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    void setHeight(int height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    void setWeight(double weight) {
         this.weight = weight;
     }
 
@@ -116,7 +116,7 @@ public class Person {
         return Objects.hash(getGender(), getLastname(), getFirstname(), getNationality(), getResidency(), getBirthday(), getHeight(), getWeight());
     }
 
-    public static final class PersonBuilder {
+    static final class PersonBuilder {
         private Gender gender;
         private String lastname;
         private String firstname;
@@ -129,51 +129,51 @@ public class Person {
         private PersonBuilder() {
         }
 
-        public static PersonBuilder aPerson() {
+        static PersonBuilder aPerson() {
             return new PersonBuilder();
         }
 
-        public PersonBuilder withGender(Gender gender) {
+        PersonBuilder withGender(Gender gender) {
             this.gender = gender;
             return this;
         }
 
-        public PersonBuilder withLastname(String lastname) {
+        PersonBuilder withLastname(String lastname) {
             this.lastname = lastname;
             return this;
         }
 
-        public PersonBuilder withFirstname(String firstname) {
+        PersonBuilder withFirstname(String firstname) {
             this.firstname = firstname;
             return this;
         }
 
-        public PersonBuilder withNationality(Country nationality) {
+        PersonBuilder withNationality(Country nationality) {
             this.nationality = nationality;
             return this;
         }
 
-        public PersonBuilder withResidency(String residency) {
+        PersonBuilder withResidency(String residency) {
             this.residency = residency;
             return this;
         }
 
-        public PersonBuilder withBirthday(LocalDate birthday) {
+        PersonBuilder withBirthday(LocalDate birthday) {
             this.birthday = birthday;
             return this;
         }
 
-        public PersonBuilder withHeight(int height) {
+        PersonBuilder withHeight(int height) {
             this.height = height;
             return this;
         }
 
-        public PersonBuilder withWeight(double weight) {
+        PersonBuilder withWeight(double weight) {
             this.weight = weight;
             return this;
         }
 
-        public Person build() {
+        Person build() {
             Person person = new Person();
             person.setGender(gender);
             person.setLastname(lastname);

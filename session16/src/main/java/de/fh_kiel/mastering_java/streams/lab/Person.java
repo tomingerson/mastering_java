@@ -95,6 +95,10 @@ public class Person {
         return this.citiesLivedIn.remove(city);
     }
 
+    public Set<String> getCitiesLivedIn() {
+        return citiesLivedIn;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", Person.class.getSimpleName() + "[", "]")
@@ -132,7 +136,7 @@ public class Person {
     }
 
 
-    public static final class PersonBuilder {
+    static final class PersonBuilder {
         private Gender gender;
         private String lastname;
         private String firstname;
@@ -146,56 +150,56 @@ public class Person {
         private PersonBuilder() {
         }
 
-        public static PersonBuilder aPerson() {
+        static PersonBuilder aPerson() {
             return new PersonBuilder();
         }
 
-        public PersonBuilder withGender(Gender gender) {
+        PersonBuilder withGender(Gender gender) {
             this.gender = gender;
             return this;
         }
 
-        public PersonBuilder withLastname(String lastname) {
+        PersonBuilder withLastname(String lastname) {
             this.lastname = lastname;
             return this;
         }
 
-        public PersonBuilder withFirstname(String firstname) {
+        PersonBuilder withFirstname(String firstname) {
             this.firstname = firstname;
             return this;
         }
 
-        public PersonBuilder withNationality(Country nationality) {
+        PersonBuilder withNationality(Country nationality) {
             this.nationality = nationality;
             return this;
         }
 
-        public PersonBuilder withResidency(String residency) {
+        PersonBuilder withResidency(String residency) {
             this.residency = residency;
             return this;
         }
 
-        public PersonBuilder withBirthday(LocalDate birthday) {
+        PersonBuilder withBirthday(LocalDate birthday) {
             this.birthday = birthday;
             return this;
         }
 
-        public PersonBuilder withCityLivedIn(String cityLivedIn) {
+        PersonBuilder withCityLivedIn(String cityLivedIn) {
             this.citiesLivedIn.add(cityLivedIn);
             return this;
         }
 
-        public PersonBuilder withHeight(int height) {
+        PersonBuilder withHeight(int height) {
             this.height = height;
             return this;
         }
 
-        public PersonBuilder withWeight(double weight) {
+        PersonBuilder withWeight(double weight) {
             this.weight = weight;
             return this;
         }
 
-        public Person build() {
+        Person build() {
             Person person = new Person();
             person.setGender(gender);
             person.setLastname(lastname);
