@@ -24,6 +24,14 @@ class Exercise {
                 .filter(person -> person.getNationality() == Country.GERMANY)
                 .mapToInt(Person::getHeight)
                 .average();
+        /*
+        return persons.isEmpty() ? OptionalDouble.empty() : OptionalDouble.of(
+                persons.stream()
+                        .filter(person -> person.getNationality() == Country.GERMANY)
+                        .map(Person::getHeight)
+                        .collect(Collectors.averagingInt(Integer::intValue))
+        );
+*/
     }
 
     static List<String> getAllUniqueCitynamesAnyPersonEverLivedIn(List<Person> persons) {
