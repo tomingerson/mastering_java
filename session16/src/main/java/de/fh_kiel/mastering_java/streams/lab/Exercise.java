@@ -12,17 +12,16 @@ import java.util.stream.Stream;
 class Exercise {
 
     static OptionalInt getHeightOfPersonInTheMiddle(List<Person> persons) {
-        // not possible in one line (?)
-        int size = persons.size();
         return persons.stream()
                 .mapToInt(Person::getHeight)
                 .sorted()
-                .skip(size / 2L)
+                .skip(persons.size() / 2L)
                 .findFirst();
     }
 
     static OptionalDouble getAverageHeightOfGermanPersons(List<Person> persons) {
         return persons.stream()
+                .filter(person -> person.getNationality() == Country.GERMANY)
                 .mapToInt(Person::getHeight)
                 .average();
     }

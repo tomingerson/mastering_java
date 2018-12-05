@@ -6,12 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.DoubleSummaryStatistics;
-import java.util.List;
-import java.util.Map;
-import java.util.OptionalDouble;
-import java.util.OptionalInt;
+import java.util.*;
 
 import static de.fh_kiel.mastering_java.streams.lab.Person.PersonBuilder.aPerson;
 import static org.junit.jupiter.api.Assertions.*;
@@ -80,14 +75,14 @@ class ExerciseTest {
     }
 
     @Test
-    @DisplayName("AverageHeight is 122")
+    @DisplayName("AverageHeight is 186")
     void testGetAverageHeightOfGermanPersons() {
         OptionalDouble empty = Exercise.getAverageHeightOfGermanPersons(Collections.emptyList());
         assertFalse(empty.isPresent());
 
         OptionalDouble avg = Exercise.getAverageHeightOfGermanPersons(persons);
         assertTrue(avg.isPresent());
-        assertEquals(178.25, avg.getAsDouble());
+        assertEquals(186.0, avg.getAsDouble());
     }
 
     @Test
