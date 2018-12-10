@@ -17,9 +17,10 @@ public class DiningPhilosophers {
             Fork leftFork = forks[i];
             Fork rightFork = forks[(i + 1) % forks.length];
 
-            philosophers[i] = new Philosopher(leftFork, rightFork);
+            String name = "Philosopher " + (i + 1);
+            philosophers[i] = new Philosopher(name, leftFork, rightFork);
 
-            Thread t = new Thread(philosophers[i], "Philosopher " + (i + 1));
+            Thread t = new Thread(philosophers[i], name);
             t.start();
         }
     }
