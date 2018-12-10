@@ -15,6 +15,8 @@
       <module name="session15_test" target="1.10" />
       <module name="session16_main" target="1.10" />
       <module name="session16_test" target="1.10" />
+      <module name="session17_main" target="1.10" />
+      <module name="session17_test" target="1.10" />
       <module name="session3_main" target="1.10" />
       <module name="session3_test" target="1.10" />
       <module name="session4_main" target="1.10" />
