@@ -7,16 +7,16 @@
       <module name="session10_session10_module1" target="1.10" />
       <module name="session10_session10_module2" target="1.10" />
       <module name="session10_test" target="1.10" />
-      <module name="session11_main" target="1.10" />
-      <module name="session11_test" target="1.10" />
-      <module name="session12_main" target="1.10" />
-      <module name="session12_test" target="1.10" />
-      <module name="session15_main" target="1.10" />
-      <module name="session15_test" target="1.10" />
-      <module name="session16_main" target="1.10" />
-      <module name="session16_test" target="1.10" />
-      <module name="session17_main" target="1.10" />
-      <module name="session17_test" target="1.10" />
+      <module name="session11_main" target="11" />
+      <module name="session11_test" target="11" />
+      <module name="session12_main" target="11" />
+      <module name="session12_test" target="11" />
+      <module name="session15_main" target="11" />
+      <module name="session15_test" target="11" />
+      <module name="session16_main" target="11" />
+      <module name="session16_test" target="11" />
+      <module name="session17_main" target="11" />
+      <module name="session17_test" target="11" />
       <module name="session3_main" target="1.10" />
       <module name="session3_test" target="1.10" />
       <module name="session4_main" target="1.10" />
@@ -29,8 +29,8 @@
       <module name="session7_test" target="1.10" />
       <module name="session8_main" target="1.10" />
       <module name="session8_test" target="1.10" />
-      <module name="session9_main" target="1.10" />
-      <module name="session9_test" target="1.10" />
+      <module name="session9_main" target="11" />
+      <module name="session9_test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
